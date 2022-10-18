@@ -36,11 +36,13 @@ public class haloOglasiTest extends baseTestHaloOglasi {
     @Test
     public void succefulRegistrationHloOglasi() {
         HaloOglasiPage.ureduButton();
+        HaloOglasiPage.setUlogujSeButton();
         HaloOglasiPage.registracijaButton();
         HaloOglasiRegistrationPage.setUserNameField("kolkan" + x);
         HaloOglasiRegistrationPage.setEmailField("koklan" + x + "@mailinator.com");
         HaloOglasiRegistrationPage.setPasswordField("12345678");
         HaloOglasiRegistrationPage.setConfirmPasswordField("12345678");
+        HaloOglasiRegistrationPage.setSaglasnostButton();
         HaloOglasiRegistrationPage.setRegistrujMeButton();
         Assert.assertTrue(HaloOglasiSuccesfulRegistrationPage.succesfulRegistrationMessageDisplayed());
         Assert.assertEquals("Registracija je uspela!\n" +

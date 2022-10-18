@@ -12,7 +12,9 @@ public class haloOglasiPage extends baseTestHaloOglasi {
 
     @FindBy(css = ".cookie-policy-btn")
     WebElement ureduButton;
-    @FindBy(linkText = "Registracija")
+    @FindBy (css = ".header-category-link.login-btn-wrapper")
+    WebElement ulogujSeButton;
+    @FindBy(xpath = "//a[contains(@title,'Registrujte se')]")
     WebElement registracijaButton;
 
     public void ureduButton() {
@@ -23,6 +25,11 @@ public class haloOglasiPage extends baseTestHaloOglasi {
     public void registracijaButton() {
         wdwait.until(ExpectedConditions.visibilityOf(registracijaButton));
         registracijaButton.click();
+    }
+
+    public void setUlogujSeButton() {
+        wdwait.until(ExpectedConditions.visibilityOf(ulogujSeButton));
+        ulogujSeButton.click();
     }
 
 

@@ -20,6 +20,9 @@ public class haloOglasiRegistrationPage extends baseTestHaloOglasi {
     WebElement confirmPasswordField;
     @FindBy(css = ".button-reg.save.save-entity.person-face.btn-main")
     WebElement registrujMeButton;
+    @FindBy(id = "HasAgreedToGetFiscalReceiptByEmail")
+    WebElement saglasnostButton;
+
 
     public void setUserNameField(String name) {
         wdwait.until(ExpectedConditions.visibilityOf(userNameField));
@@ -49,6 +52,11 @@ public class haloOglasiRegistrationPage extends baseTestHaloOglasi {
     public void setRegistrujMeButton() {
         wdwait.until(ExpectedConditions.visibilityOf(registrujMeButton));
         registrujMeButton.click();
+    }
+
+    public void setSaglasnostButton() {
+        wdwait.until(ExpectedConditions.visibilityOf(saglasnostButton));
+        saglasnostButton.click();
     }
 
 

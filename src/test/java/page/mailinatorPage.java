@@ -9,9 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class mailinatorPage extends baseTestHaloOglasi {
     public mailinatorPage() { PageFactory.initElements(driver, this); }
 
-    @FindBy(css = ".form-control.input-text.h-auto")
+    @FindBy(id = "search")
     WebElement emailInputField;
-    @FindBy(id = "go-to-public")
+    @FindBy(xpath = "//button[contains(@value,'Search for public inbox for free')]")
     WebElement goToEmailButton;
     @FindBy(xpath = "(//td[@class=\"ng-binding\"])[1]")
     WebElement emailClick;
